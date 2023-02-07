@@ -9,16 +9,19 @@
 
 int main()
 {
-	float fahr;
-	float upper, lower, step;
+	double fahr;
+	double upper, lower, step;
 	
 	upper = 300;
 	lower = 0;
 	step = 20;
 	
-	printf("  F\t C\n");
+	/* HEADER */
+	printf("\n    F |     C\n");
+	printf("—————————————\n");
 	for (fahr = upper; fahr >= lower; fahr = fahr - step) {
-			printf("%3.0f %6.1f\n", fahr, (5.0/9.0) * (fahr-32.0));
+			printf("%5.0f | %5.1f\n", fahr, (5.0/9.0) * (fahr-32.0));
 	}
+	printf("\n");
 	return 0;
 }

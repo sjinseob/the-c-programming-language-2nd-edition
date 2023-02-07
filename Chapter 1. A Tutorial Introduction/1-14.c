@@ -26,11 +26,11 @@ int main()
 	}
 	
 	/* Print histogram */
-	printf("Number of characters:\n");
+	printf("\n");
 	for (i = 0; i < CHAR_NUM; i++) {
-		printf("%c%c|| ", i+'A', i+'a');
+		printf("%c%c | ", i+'A', i+'a');
 		for (j = 0; j < nc[i]; j++) {
-			printf("#");
+			printf("█");
 		}
 		printf("\n");
 	}

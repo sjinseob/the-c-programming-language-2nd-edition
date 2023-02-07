@@ -1,10 +1,6 @@
 #include <stdio.h>
-	
-/* Exercise 1-9:
-	replace one or more blanks by a single blank */
 
-main()
-{
+int main() {
 	int c;
 	while ((c = getchar()) != EOF) {
 		if (c == ' ') {
@@ -14,4 +10,6 @@ main()
 		}
 		putchar(c);
 	}
+
+	return 0;
 }	

@@ -1,14 +1,6 @@
-/*
- *	Exercise 1-6.
- *	This program prints the value of the expression
- *	getchar() != EOF. Since != is a relational operator, this expression
- *	would evaluate to either 0 or 1 if it is false or true, respectively.
- */
-
 #include <stdio.h>
 
-int main()
-{
+int main() {
 	/* 
 	 *	Sending an EOF signal to the terminal differs by operating 
 	 *	system : for instance, on Linux and macOS (OS X) Terminal its 

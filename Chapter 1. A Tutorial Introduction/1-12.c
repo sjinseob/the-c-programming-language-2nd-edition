@@ -3,8 +3,7 @@
 /* Exercise 1-12:
 	Program that prints its input one word per line */
 
-int main()
-{
+int main() {
 	int ch;
 	while ((ch = getchar()) != EOF) {
 		if (ch == ' ')
