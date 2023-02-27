@@ -23,13 +23,13 @@ int main() {
 /* Converts a string of hexademical digits to its equivalent integer value.*/
 int htoi(char s[]) {
     int len = strlen(s);
-    char c;
     int final_result = 0;       // final converted number
     int final_string_i = 0;     // string traversal endpoint
     int hex_spec = ((s[1]-'x' == 0) || (s[1]-'X' == 0));  // check whether '0x' or '0X' is specified.
     if (hex_spec) final_string_i = 2;
 
     // Move through string, calculating number along the way.
+    char c;
     for (int i = len-1; i >= final_string_i; i--) {
         c = s[i];
         if (isalpha(c)) {
