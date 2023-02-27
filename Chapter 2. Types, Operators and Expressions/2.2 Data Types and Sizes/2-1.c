@@ -51,6 +51,7 @@ int main() {
     return 0;
 }
 
+/* Custom helper function that recursively calculates powers. */
 long bpow(long x, long y) {
     long res = x;
     if (y == 0) return 1;
