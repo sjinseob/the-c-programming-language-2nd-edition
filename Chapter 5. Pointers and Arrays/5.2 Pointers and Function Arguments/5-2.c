@@ -12,16 +12,14 @@ int getch(void);
 void ungetch(int);
 int getfloat(float *pn);
 
-int main()
-{
+int main() {
     float num;
     getfloat(&num);
     printf("Final number: %f\n", num);
     return 0;
 }
 
-int getfloat(float *pn)
-{
+int getfloat(float *pn) {
     printf("Initial state of num: %f\n", *pn);
     int c, sign;
     float f;
@@ -58,13 +56,11 @@ int getfloat(float *pn)
     return c;
 }
 
-int getch(void) /* Get a (possibly pushed-back) character. */
-{
+int getch(void) /* Get a (possibly pushed-back) character. */ {
     return (bufp > 0) ? buf[--bufp] : getchar();
 }
 
-void ungetch(int c) /* Push character back on input */
-{
+void ungetch(int c) /* Push character back on input */ {
     if (bufp >= BUFSIZE)
         printf("ungetch: too many characters\n");
     else

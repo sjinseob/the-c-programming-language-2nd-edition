@@ -11,15 +11,13 @@ int getch(void);
 void ungetch(int);
 int getint(int *pn);
 
-int main()
-{
+int main() {
     int num;
     getint(&num);
     printf("Final number: %d\n", num);
 }
 
-int getint(int *pn)
-{
+int getint(int *pn) {
     printf("Initial state of num: %d\n", *pn);
     int c, sign;
 
@@ -43,13 +41,11 @@ int getint(int *pn)
     return c;
 }
 
-int getch(void) /* Get a (possibly pushed-back) character. */
-{
+int getch(void) /* Get a (possibly pushed-back) character. */ {
     return (bufp > 0) ? buf[--bufp] : getchar();
 }
 
-void ungetch(int c) /* Push character back on input */
-{
+void ungetch(int c) /* Push character back on input */ {
     if (bufp >= BUFSIZE)
         printf("ungetch: too many characters\n");
     else
