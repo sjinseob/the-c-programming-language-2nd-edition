@@ -4,11 +4,14 @@
 
 unsigned invert(unsigned, int, int);
 
+/* invert: returns x with the n bits that begin at position p inverted, leaving the others unchanged. */
 unsigned invert(unsigned x, int p, int n) {
-    return ((~0 << (n+p-1)) + ~(~0 << (p-1)) & x) /*+ (~((x >> (p+1-n)) & ~(~0 << n)) << (n+p-1))*/;
+    return (((unsigned) ~0 << (p+1)) + ~((unsigned) ~0 << (p+1-n)) & x) + ~((((unsigned) ~0 << (p+1)) + ~(~0 << (p+1-n))) | x);
 }
 
 int main() {
-    printf("%d\n", invert(0b00101100, 4, 2));
+    assert(52 == invert(0b00101100, 4, 2));
+    assert(60 == invert(0b00101100, 4, 1));
+    assert(50 == invert(0b00101100, 4, 4));
     return 0;
 }
