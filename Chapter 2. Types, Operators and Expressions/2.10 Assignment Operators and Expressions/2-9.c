@@ -2,6 +2,7 @@
 #include <assert.h>
 
 int bitcount(unsigned);
+
 /* 
  * Exercise 2-9.
  * In a two's complements system, x &= x-1 deletes the rightmost 1-bit.
