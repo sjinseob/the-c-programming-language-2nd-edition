@@ -2,3 +2,6 @@
 a.out
 .vscode/settings.json
 Chapter 6. Structures/sandbox.c
+sandbox.c
+list.c
+list.h
