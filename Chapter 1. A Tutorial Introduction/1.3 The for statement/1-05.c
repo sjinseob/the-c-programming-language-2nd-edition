@@ -16,7 +16,7 @@ int main()
 	lower = 0;
 	step = 20;
 	
-	/* HEADER */
+	// HEADER
 	printf("\n    F |     C\n");
 	printf("—————————————\n");
 	for (fahr = upper; fahr >= lower; fahr = fahr - step) {
