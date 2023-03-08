@@ -16,7 +16,7 @@ int main()
 	step = 20.0;			/* increment */
 	
 
-	/* HEADER */
+	// HEADER
 	printf("\n    F |     C\n");
 	printf("—————————————\n");
 
